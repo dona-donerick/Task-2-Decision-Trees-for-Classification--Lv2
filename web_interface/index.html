@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Annotation d'Images Africaines</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+        <h1>🖼️ Annotateur d'Images Africaines</h1>
+</header>
+
+    <section class="intro-section">
+        <h2>📜 Histoire du Bénin</h2>
+        <p>
+        Le Bénin, autrefois connu comme le Royaume du Dahomey, 
+        est riche en culture et traditions. Des royaumes puissants, 
+        des rois comme Béhanzin et Gbéhanzin, et des pratiques artistiques comme le Vodoun ou les masques Guèlèdè, 
+        font du Bénin une terre d'héritage et de beauté visuelle.
+        </p>
+    </section>
+    
+    <section class="gallery-section">
+        <h2>Images culturelles du Bénin</h2>
+        <div id="image-gallery" class="gallery">
+        <!-- Images dynamiquement injectées ici -->
+        </div>
+    </section>
+  
+    <!--<section class="gallery-section">
+        <h2>Images Africaines à Annoter</h2>
+        <div id="image-gallery" class="gallery"></div>
+    </section>-->
+
+    <section class="upload-section">
+        <h2>Choisir une Image à Annoter</h2>
+        <input type="file" id="upload-input" accept="image/*">
+        <button onclick="submitImage()">📤 Annoter l'image</button>
+    </section>
+
+    <section id="result-section" class="hidden">
+        <h2>Résultat</h2>
+        <img id="annotated-image" alt="Image Annotée">
+        <div id="description"></div>
+        <ul id="objects-list"></ul>
+    </section>
+
+  <script src="scriptjs.js"></script>
+</body>
+</html>

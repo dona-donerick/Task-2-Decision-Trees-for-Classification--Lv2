@@ -109,8 +109,8 @@ def annotate_image(image_path):
 ```
 .
 ├── api/
-│   ├── main.py           # Serveur FastAPI
-│   └── endpoints.py      # Points d'accès API
+│   ├── main.py           # Serveur FastAPI et point d'accès aux endpoints
+│    
 ├── data/
 │   ├── raw/              # Images originales
 │   └── processed/        # Images traitées
