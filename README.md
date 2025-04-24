@@ -3,6 +3,8 @@
 ## 📝 Description du Projet
 
 Ce projet est un système d'annotation automatique d'images qui combine l'intelligence artificielle et la vision par ordinateur pour analyser et décrire automatiquement le contenu des images. Le système est entièrement automatisé et peut être déployé comme un service, permettant l'annotation en temps réel de n'importe quelle image soumise.
+![image d'une femme africaine](https://github.com/user-attachments/assets/e6cc4185-cc7c-4e5e-bcfb-1dfbfe0079ff)
+
 
 ## 🎯 Objectifs
 
