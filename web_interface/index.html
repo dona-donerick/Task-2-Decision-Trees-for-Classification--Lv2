@@ -1,50 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Annotation d'Images Africaines</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Annotation Automatique d'Images Africaines</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-  <header>
-        <h1>🖼️ Annotateur d'Images Africaines</h1>
-</header>
+    <h1>Annotation des Images Africaines</h1>
 
-    <section class="intro-section">
-        <h2>📜 Histoire du Bénin</h2>
-        <p>
-        Le Bénin, autrefois connu comme le Royaume du Dahomey, 
-        est riche en culture et traditions. Des royaumes puissants, 
-        des rois comme Béhanzin et Gbéhanzin, et des pratiques artistiques comme le Vodoun ou les masques Guèlèdè, 
-        font du Bénin une terre d'héritage et de beauté visuelle.
-        </p>
-    </section>
-    
-    <section class="gallery-section">
-        <h2>Images culturelles du Bénin</h2>
-        <div id="image-gallery" class="gallery">
-        <!-- Images dynamiquement injectées ici -->
-        </div>
-    </section>
-  
-    <!--<section class="gallery-section">
-        <h2>Images Africaines à Annoter</h2>
-        <div id="image-gallery" class="gallery"></div>
-    </section>-->
+    <h2>Charger votre image</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Envoyer</button>
+    </form>
 
-    <section class="upload-section">
-        <h2>Choisir une Image à Annoter</h2>
-        <input type="file" id="upload-input" accept="image/*">
-        <button onclick="submitImage()">📤 Annoter l'image</button>
-    </section>
-
-    <section id="result-section" class="hidden">
-        <h2>Résultat</h2>
-        <img id="annotated-image" alt="Image Annotée">
-        <div id="description"></div>
-        <ul id="objects-list"></ul>
-    </section>
-
-  <script src="scriptjs.js"></script>
+    <h2>Quelques Images Africaines</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        {% for img in images %}
+            <div style="margin: 10px;">
+                <img src="{{ img.base64 }}" alt="{{ img.filename }}" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+            </div>
+        {% endfor %}
+    </div>
+    <script src="/static/script.js" defer></script>
 </body>
 </html>
